@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <meta http-equiv="x-ua-compatible" content="ie=edge">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <style type="text/css">
+            #nav {
+                background: #3BB991;
+                background-size: 100vw;
+                background-repeat: no-repeat;
+                margin-bottom: 3vh;
+            }
+            #nav a:link, #nav a:visited, #nav a:active {
+                color: white;
+            }
+            #nav a:hover {
+                color: rgb(128, 128, 128);
+            }
+            #social {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-around;
+                padding: 0;
+                text-align: center;
+            }
+            .icons {
+                height: 100px;
+                width: 100px;
+                margin: auto;
+                display: block;
+            }
+            h3, p {
+                margin-top: 3vh;
+            }
+            @media (min-width: 600px) {
+                .hidden {
+                    display: none;
+                }
+                #social {
+                    margin: 30vh 0 0 0;
+                }
+            }
+            @media (max-width: 600px) {
+                .icons {
+                    height: 50px;
+                    width: 50px;
+                    margin: auto;
+                    display: block;
+                }
+                h3, p {
+                    font-size: 80%;
+                }
+                .nav-item {
+                    font-size: 80%;
+                    margin: auto;
+                }
+                #nav {
+                    max-width: 100vw;
+                }
+            }
+            a {
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="social">
+            <div id="twitter" onmouseover="document.getElementById('twitterText').classList.remove('hidden')" onmouseout="document.getElementById('twitterText').classList.add('hidden')">
+                <a href="https://twitter.com/AbigailSwigert">
+                    <img class="icons" src="twitter-icon.png">
+                </a>
+                <div id="twitterText" class="hidden">
+                    <h3>@AbigailSwigert</h3>
+                    <p>Find out more about me on Twitter!</p>
+                </div>
+            </div>
+            <div id="linkedIn" onmouseover="document.getElementById('linkedinText').classList.remove('hidden')" onmouseout="document.getElementById('linkedinText').classList.add('hidden')">
+                <a href="https://www.linkedin.com/in/abigailswigert">
+                    <img class="icons" src="linkedin-icon.png">
+                </a>
+                <div id="linkedinText" class="hidden">
+                    <h3>www.linkedin.com/in/<br>abigailswigert</h3>
+                    <p>Find out more about my experience on LinkedIn!</p>
+                </div>
+            </div>
+            <div id="facebook" onmouseover="document.getElementById('facebookText').classList.remove('hidden')" onmouseout="document.getElementById('facebookText').classList.add('hidden')">
+                <a href="https://www.facebook.com/abigailswigert514">
+                    <img class="icons" src="facebook-icon.png">
+                </a>
+                <div id="facebookText" class="hidden">
+                    <h3>Abigail Swigert</h3>
+                    <p>Become my friend on Facebook!</p>
+                </div>
+            </div>
+            <div id="insta" onmouseover="document.getElementById('instaText').classList.remove('hidden')" onmouseout="document.getElementById('instaText').classList.add('hidden')">
+                <a href="https://www.instagram.com/abigailswigert/">
+                    <img class="icons" src="instagram-icon.png">
+                </a>
+                <div id="instaText" class="hidden">
+                    <h3>@AbigailSwigert</h3>
+                    <p>See what matters to me on Instagram!</p>
+                </div>
+            </div>
+            <div id="email" onmouseover="document.getElementById('emailText').classList.remove('hidden')" onmouseout="document.getElementById('emailText').classList.add('hidden')">
+                <a href="emailform.html">
+                    <img class="icons" src="email-icon.png">
+                </a>
+                <div id="emailText" class="hidden">
+                    <h3>abigailswigert@my.unt.edu</h3>
+                    <p>Get in contact with me via Email!</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+    </script>
+</html>

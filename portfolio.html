@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Portfolio</title>
+        
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <meta http-equiv="x-ua-compatible" content="ie=edge">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <style type="text/css">
+            #nav {
+                background: #3BB991;
+                background-size: 100vw;
+                background-repeat: no-repeat;
+                margin-bottom: 3vh;
+            }
+            #nav a:link, #nav a:visited, #nav a:active {
+                color: white;
+            }
+            #nav a:hover {
+                color: rgb(128, 128, 128);
+            }
+            @media (max-width: 600px) {
+                .nav-item {
+                    font-size: 80%;
+                    margin: auto;
+                }
+                #nav {
+                    max-width: 100vw;
+                }
+                .portfolioImages {
+                    height: 20vh !important;
+                    width: 50vw !important;
+                }
+            }
+            #flexContainer {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-around;
+                padding: 0;
+                margin: 0;
+            }
+            .portfolioImages {
+                border-radius: 3%;
+                height: 40vh;
+                width: 30vw;
+                float: left;
+                margin-bottom: 3vh;
+                object-fit: cover;
+                max-width: 95vw;
+            }
+            .portfolioImages:hover {
+                opacity: .7;
+            }
+            .close {
+                color: #3BB991;
+                padding: 0 2vw 0 0;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .close:hover, .close:focus {
+                color: rgb(128, 128, 128);
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .modal {
+                background: rgba(0, 0, 0, 0.9);
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+            .modalImg {
+                object-fit: contain;
+                max-height: 100vh;
+                max-width: 100vw;
+                margin: auto;
+                display: block;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+            @keyframes zoom {
+                from {transform:scale(0)}
+                to {transform:scale(1)}
+            }
+            img {
+                image-rendering: -webkit-optimize-contrast;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="annaModal" class="modal">
+            <span id="annaClose" class="close">&times;</span>
+            <img id="AMImg" class="modalImg">
+        </div>
+        <div id="candidModal" class="modal">
+            <span id="candidClose" class="close">&times;</span>
+            <img id="CMImg" class="modalImg">
+        </div>
+        <div id="elevateModal" class="modal">
+            <span id="elevateClose" class="close">&times;</span>
+            <img id="EMImg" class="modalImg">
+        </div>
+        <div id="fujiModal" class="modal">
+            <span id="fujiClose" class="close">&times;</span>
+            <img id="FMImg" class="modalImg">
+        </div>
+        <div id="inviteModal" class="modal">
+            <span id="inviteClose" class="close">&times;</span>
+            <img id="IMImg" class="modalImg">
+        </div>
+        <div id="editModal" class="modal">
+            <span id="editClose" class="close">&times;</span>
+            <img id="editMImg" class="modalImg">
+        </div>
+        <div id="smModal" class="modal">
+            <span id="smClose" class="close">&times;</span>
+            <img id="SMMImg" class="modalImg">
+        </div>
+        <div id="tpModal" class="modal">
+            <span id="tpClose" class="close">&times;</span>
+            <img id="TMImg" class="modalImg">
+        </div>
+        <div id="flexContainer">
+            <img id="annaImg" class="portfolioImages" src="anna.jpg">
+            <img id="candidImg" class="portfolioImages" src="candid.jpg" style="object-position:0 5%;">
+            <img id="elevateImg" class="portfolioImages" src="Elevate.jpg">
+            <img id="fujiImg" class="portfolioImages" src="Fuji_mock-up.jpg">
+            <img id="inviteImg" class="portfolioImages" src="housewarming.png">
+            <img id="editImg" class="portfolioImages" src="MC_edit.jpg">
+            <img id="smImg" class="portfolioImages" src="sockmonkey.jpg">
+            <img id="tpImg" class="portfolioImages" src="tolkienposter.png">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script type="text/javascript">
+        //Anna
+            document.getElementById('annaImg').onclick = function(){
+                document.getElementById('annaModal').style.display = "block";
+                document.getElementById('AMImg').src = this.src;
+            }
+            document.getElementById("annaClose").onclick = function() {
+                document.getElementById('annaModal').style.display = "none";
+            }
+        //Candid
+            document.getElementById('candidImg').onclick = function(){
+                document.getElementById('candidModal').style.display = "block";
+                document.getElementById('CMImg').src = this.src;
+            }
+            document.getElementById("candidClose").onclick = function() {
+                document.getElementById('candidModal').style.display = "none";
+            }
+        //Elevate
+            document.getElementById('elevateImg').onclick = function(){
+                document.getElementById('elevateModal').style.display = "block";
+                document.getElementById('EMImg').src = this.src;
+            }
+            document.getElementById("elevateClose").onclick = function() {
+                document.getElementById('elevateModal').style.display = "none";
+            }
+        //Fuji PowerPoint
+            document.getElementById('fujiImg').onclick = function(){
+                document.getElementById('fujiModal').style.display = "block";
+                document.getElementById('FMImg').src = this.src;
+            }
+            document.getElementById("fujiClose").onclick = function() {
+                document.getElementById('fujiModal').style.display = "none";
+            }
+        //Housewarming Invite
+            document.getElementById('inviteImg').onclick = function(){
+                document.getElementById('inviteModal').style.display = "block";
+                document.getElementById('IMImg').src = this.src;
+            }
+            document.getElementById("inviteClose").onclick = function() {
+                document.getElementById('inviteModal').style.display = "none";
+            }
+        //MC Edit
+            document.getElementById('editImg').onclick = function(){
+                document.getElementById('editModal').style.display = "block";
+                document.getElementById('editMImg').src = this.src;
+            }
+            document.getElementById("editClose").onclick = function() {
+                document.getElementById('editModal').style.display = "none";
+            }
+        //Sock Monkey
+            document.getElementById('smImg').onclick = function(){
+                document.getElementById('smModal').style.display = "block";
+                document.getElementById('SMMImg').src = this.src;
+            }
+            document.getElementById("smClose").onclick = function() {
+                document.getElementById('smModal').style.display = "none";
+            }
+        //Tolkien Poster
+            document.getElementById('tpImg').onclick = function(){
+                document.getElementById('tpModal').style.display = "block";
+                document.getElementById('TMImg').src = this.src;
+            }
+            document.getElementById("tpClose").onclick = function() {
+                document.getElementById('tpModal').style.display = "none";
+            }
+        </script>
+    </body>
+</html>

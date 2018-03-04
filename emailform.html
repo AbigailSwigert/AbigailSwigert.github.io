@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Email Me</title>
+        
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <meta http-equiv="x-ua-compatible" content="ie=edge">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <style type="text/css">
+            #nav {
+                background: #3BB991;
+                background-size: 100vw;
+                background-repeat: no-repeat;
+                margin-bottom: 3vh;
+            }
+            #nav a:link, #nav a:visited, #nav a:active {
+                color: white;
+            }
+            #nav a:hover {
+                color: rgb(128, 128, 128);
+            }
+            @media (min-width: 600px) {
+                #form {
+                    width: 50vw;
+                }
+            }
+            @media (max-width: 600px) {
+                .nav-item {
+                    font-size: 80%;
+                    margin: auto;
+                }
+                #nav {
+                    max-width: 100vw;
+                }
+                #form {
+                    width: 80vw;
+                }
+            }
+            #submit {
+                background-color: #4fd4d4;
+                display: block;
+                margin: auto;
+            }
+            #submit:hover {
+                background-color: #3BB991
+            }
+            #submit:active {
+                background-color: rgb(90, 121, 105);
+            }
+            #message {
+                height: 20vh;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="form" class="container">
+            <form method="post" enctype="multipart/form-data" action="https://formspree.io/abigailswigert@my.unt.edu">
+                <fieldset class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Example@email.com" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea type="text" id="message" name="message" class="form-control" placeholder="Ask me more about myself and my work experience or let me know about an open position here."></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                    <button id="submit" type="submit" name="submit" class="btn">Submit!</button>
+                </fieldset>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+    </body>
+</html>
