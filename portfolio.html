@@ -143,15 +143,20 @@
             <span id="tpClose" class="close">&times;</span>
             <img id="TMImg" class="modalImg">
         </div>
+        <div id="tfModal" class="modal">
+            <span id="tfClose" class="close">&times;</span>
+            <img id="TFIImg" class="modalImg">
+        </div>
         <div id="flexContainer">
             <img id="annaImg" class="portfolioImages" src="anna.jpg">
             <img id="candidImg" class="portfolioImages" src="candid.jpg" style="object-position:0 5%;">
-            <img id="elevateImg" class="portfolioImages" src="Elevate.jpg">
+            <img id="elevateImg" class="portfolioImages" src="Elevate.jpg" style="object-position:0 5%;">
             <img id="fujiImg" class="portfolioImages" src="Fuji_mock-up.jpg">
             <img id="inviteImg" class="portfolioImages" src="housewarming.png">
             <img id="editImg" class="portfolioImages" src="MC_edit.jpg">
             <img id="smImg" class="portfolioImages" src="sockmonkey.jpg">
             <img id="tpImg" class="portfolioImages" src="tolkienposter.png">
+            <img id="tfImg" class="portfolioImages" src="21-invite.png" style="object-position:0 5%;">
         </div>
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -221,6 +226,14 @@
             }
             document.getElementById("tpClose").onclick = function() {
                 document.getElementById('tpModal').style.display = "none";
+            }
+        //Twenty-First Birthday Invite
+            document.getElementById('tfImg').onclick = function(){
+                document.getElementById('tfModal').style.display = "block";
+                document.getElementById('TFIImg').src = this.src;
+            }
+            document.getElementById("tfClose").onclick = function() {
+                document.getElementById('tfModal').style.display = "none";
             }
         </script>
     </body>
