@@ -1,9 +1,0 @@
-[submodule "Alcoholistic"]
-	path = Alcoholistic
-	url = https://github.com/AbigailSwigert/Alcoholistic
-[submodule "coldbrew"]
-	path = coldbrew
-	url = https://github.com/AbigailSwigert/coldbrew
-[submodule "invite"]
-	path = invite
-	url = https://github.com/AbigailSwigert/invite
