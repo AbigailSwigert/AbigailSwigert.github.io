@@ -6,7 +6,17 @@
                  
         <meta charset="utf-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
-        <meta http-equiv="x-ua-compatible" content="ie=edge">    
+        <meta http-equiv="x-ua-compatible" content="ie=edge">  
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129063663-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129063663-1');
+        </script>
+  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
                   
         <style type="text/css">
@@ -16,6 +26,11 @@
                 background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
                 overflow: hidden;
             }
+			#nav {
+				position: absolute;
+				z-index: 1;
+				width: 100vw;
+			}
             .animate {
                 -webkit-animation-duration: 1500ms;
                 animation-duration: 1500ms;
@@ -24,43 +39,47 @@
             }
             img {
                 padding-top: 8%;
-                max-width: 97vw;
+                width: 97vw;
+				max-width: 2000px;
                 image-rendering: -webkit-optimize-contrast;
                 display: flex;
                 outline: 1px solid transparent;
             }
+			#green {
+				display: none;
+			}
             @-webkit-keyframes fadeInUp {
                 0% {
-                  opacity: 0;
-                  -webkit-transform: translate3d(0, 100%, 0);
-                  transform: translate3d(0, 100%, 0);
+                    opacity: 0;
+                    -webkit-transform: translate3d(0, 120%, 0);
+                    transform: translate3d(0, 120%, 0);
                 }
                
                 40% {
-                  opacity: 0;
+                    opacity: 0;
                 }
 
                 100% {
                     opacity: 1;
-                  -webkit-transform: none;
-                  transform: none;
+                    -webkit-transform: translate3d(0, 10%, 0);
+                    transform: translate3d(0, 10%, 0);
                 }
             }
             @keyframes fadeInUp {
                 0% {
                     opacity: 0;
-                    -webkit-transform: translate3d(0, 100%, 0);
-                    transform: translate3d(0, 100%, 0);
+                    -webkit-transform: translate3d(0, 120%, 0);
+                    transform: translate3d(0, 120%, 0);
                 }
-                 
+               
                 40% {
                     opacity: 0;
                 }
-  
+
                 100% {
                     opacity: 1;
-                    -webkit-transform: none;
-                    transform: none;
+                    -webkit-transform: translate3d(0, 10%, 0);
+                    transform: translate3d(0, 10%, 0);
                 }
             }
             .fadeInUp {
@@ -79,36 +98,85 @@
                     margin: auto;
                 }
                 #nav {
-                    max-width: 100vw;
+					background-color: #3cba92;
                 }
                 img {
                     margin-left: -2vw; 
                 }
-            }
+				#jumbotron {
+					background-image: url("Images/Abigail on TBird.png");
+					background-size: cover;
+				}
+				#nav a:link {
+				font-weight: 500;
+				}
+				#white {
+					display: none;
+				}
+				#green {
+					display: inherit;
+				}
+				@-webkit-keyframes fadeInUp {
+					0% {
+					  opacity: 0;
+					  -webkit-transform: translate3d(0, 70vh, 0);
+					  transform: translate3d(0, 70vh, 0);
+					}
+
+					40% {
+					  opacity: 0;
+					}
+
+					100% {
+						opacity: 1;
+					  -webkit-transform: translate3d(0, 30vh, 0);
+					  transform: ntranslate3d(0, 30vh, 0);
+					}
+            	}
+				@keyframes fadeInUp {
+					0% {
+						opacity: 0;
+						-webkit-transform: translate3d(0, 70vh, 0);
+						transform: translate3d(0, 70vh, 0);
+					}
+
+					40% {
+						opacity: 0;
+					}
+
+					100% {
+						opacity: 1;
+						-webkit-transform: translate3d(0, 30vh, 0);
+						transform: translate3d(0, 30vh, 0);
+					}
+				}
+			}
+				
         </style>
     </head>
 
     <body>
-        <div id="jumbotron" class="container-fluid">
-            <nav id="nav" class="navbar navbar-default">
+		<nav id="nav" class="navbar navbar-default">
                 <div class="container">
                     <ul class="nav nav-fill">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link active" href="/index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resume.html">Resume</a>
+                            <a class="nav-link" href="/resume">Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <a class="nav-link" href="/myportfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Me</a>
+                            <a class="nav-link" href="/contact">Contact Me</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <img class="animate fadeInUp" src="landing-logo.png">
+        <div id="jumbotron" class="container-fluid">
+            <img id="white" class="animate fadeInUp" src="Images/landing-logo.png">
+			<img id="green" class="animate fadeInUp" src="Images/Green Logo.png">
         </div>
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

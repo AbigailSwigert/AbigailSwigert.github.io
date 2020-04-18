@@ -5,7 +5,17 @@
         
         <meta charset="utf-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
-        <meta http-equiv="x-ua-compatible" content="ie=edge">    
+        <meta http-equiv="x-ua-compatible" content="ie=edge">  
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129063663-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129063663-1');
+        </script>
+  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
         <style type="text/css">
@@ -73,16 +83,16 @@
             <div class="container">
                 <ul class="nav nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="/index">Home</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="resume.html">Resume</a>
+                        <a class="nav-link" href="/resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <a class="nav-link" href="/myportfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Me</a>
+                        <a class="nav-link" href="/contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +100,7 @@
         <div id="social">
             <div id="twitter" onmouseover="document.getElementById('twitterText').classList.remove('hidden')" onmouseout="document.getElementById('twitterText').classList.add('hidden')">
                 <a href="https://twitter.com/AbigailSwigert">
-                    <img class="icons" src="twitter-icon.png">
+                    <img class="icons" src="Images/twitter-icon.png">
                 </a>
                 <div id="twitterText" class="hidden">
                     <h3>@AbigailSwigert</h3>
@@ -99,25 +109,16 @@
             </div>
             <div id="linkedIn" onmouseover="document.getElementById('linkedinText').classList.remove('hidden')" onmouseout="document.getElementById('linkedinText').classList.add('hidden')">
                 <a href="https://www.linkedin.com/in/abigailswigert">
-                    <img class="icons" src="linkedin-icon.png">
+                    <img class="icons" src="Images/linkedin-icon.png">
                 </a>
                 <div id="linkedinText" class="hidden">
                     <h3>www.linkedin.com/in/<br>abigailswigert</h3>
                     <p>Find out more about my experience on LinkedIn!</p>
                 </div>
             </div>
-            <div id="facebook" onmouseover="document.getElementById('facebookText').classList.remove('hidden')" onmouseout="document.getElementById('facebookText').classList.add('hidden')">
-                <a href="https://www.facebook.com/abigailswigert514">
-                    <img class="icons" src="facebook-icon.png">
-                </a>
-                <div id="facebookText" class="hidden">
-                    <h3>Abigail Swigert</h3>
-                    <p>Become my friend on Facebook!</p>
-                </div>
-            </div>
             <div id="insta" onmouseover="document.getElementById('instaText').classList.remove('hidden')" onmouseout="document.getElementById('instaText').classList.add('hidden')">
                 <a href="https://www.instagram.com/abigailswigert/">
-                    <img class="icons" src="instagram-icon.png">
+                    <img class="icons" src="Images/instagram-icon.png">
                 </a>
                 <div id="instaText" class="hidden">
                     <h3>@AbigailSwigert</h3>
@@ -125,8 +126,8 @@
                 </div>
             </div>
             <div id="email" onmouseover="document.getElementById('emailText').classList.remove('hidden')" onmouseout="document.getElementById('emailText').classList.add('hidden')">
-                <a href="emailform.html">
-                    <img class="icons" src="email-icon.png">
+                <a href="/emailform">
+                    <img class="icons" src="Images/email-icon.png">
                 </a>
                 <div id="emailText" class="hidden">
                     <h3>Abigail@SwigertDesigns.com</h3>

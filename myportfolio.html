@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Portfolio</title>
+        
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <meta http-equiv="x-ua-compatible" content="ie=edge">  
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129063663-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129063663-1');
+        </script>
+  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+
+        <style type="text/css">
+            body {
+                overflow-x: hidden;
+            }
+            #nav {
+                background: #3BB991;
+                background-size: 100vw;
+                background-repeat: no-repeat;
+                margin-bottom: 3vh;
+            }
+            #nav a:link, #nav a:visited, #nav a:active {
+                color: white;
+            }
+            #nav a:hover {
+                color: rgb(128, 128, 128);
+            }
+            #flexContainer {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-around;
+                padding: 0;
+                margin: 0;
+            }
+            .portfolioCard {
+                display: flex;
+                width: 250px;
+                height: 400px;
+                text-align: center;
+                font-family: 'Raleway', sans-serif;
+                flex-direction: column;
+                box-shadow: 1px 1px 3px #acacac;
+                margin: 20px;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            .portfolioImages {
+                border-radius: 50%;
+                height: 225px;
+                width: 225px;
+                margin: 20px auto;
+                object-fit: cover;
+            }
+            .portfolioCard:hover {
+                background-color: #90D5DF;
+            }
+            .close {
+                color: #3BB991;
+                padding: 0 2vw 0 0;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .close:hover, .close:focus {
+                color: rgb(128, 128, 128);
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .modal {
+                background: rgba(0, 0, 0, 0.9);
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+            .modalImg {
+                object-fit: contain;
+                max-height: 100vh;
+                max-width: 100vw;
+                margin: auto;
+                display: block;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+            @keyframes zoom {
+                from {transform:scale(0)}
+                to {transform:scale(1)}
+            }
+            img {
+                image-rendering: -webkit-optimize-contrast;
+            }
+            a:link, a:hover, a:visited, a:active {
+                color: black;
+                text-decoration: none;
+            }
+            #img2 {
+                object-fit: contain;
+            }
+
+
+            @media (max-width: 600px) {
+                .nav-item {
+                    font-size: 80%;
+                    margin: auto;
+                }
+                #nav {
+                    max-width: 100vw;
+                }
+                .portfolioImages {
+                    height: 100px;
+                    width: 100px;
+                    margin: 10px auto;
+                }
+                .portfolioCard {
+                    width: 125px;
+                    height: 200px;
+                    font-size: 50%;
+                    margin: 5px;
+                    padding: none;
+                }
+                a:link, a:hover, a:visited, a:active {
+                color: black;
+                text-decoration: none;
+                }
+                #mimg10 {
+                    height: 92vh;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/index">Home</a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/myportfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="modal1" class="modal">
+            <span id="close1" class="close">&times;</span>
+            <img id="mimg1" class="modalImg">
+        </div>
+        <div id="modal2" class="modal">
+            <span id="close2" class="close">&times;</span>
+            <img id="mimg2" class="modalImg" src="Portfolio/Life Kratom.png">
+        </div>
+        <div id="modal3" class="modal">
+            <span id="close3" class="close">&times;</span>
+            <img id="mimg3" class="modalImg">
+        </div>
+        <div id="modal4" class="modal">
+            <span id="close4" class="close">&times;</span>
+            <img id="mimg4" class="modalImg">
+        </div>
+        <div id="modal5" class="modal">
+            <span id="close5" class="close">&times;</span>
+            <img id="mimg5" class="modalImg" src="Portfolio/Top Kratom Mockups.png">
+        </div>
+        <div id="modal6" class="modal">
+            <span id="close6" class="close">&times;</span>
+            <img id="mimg6" class="modalImg">
+        </div>
+        <div id="modal7" class="modal">
+            <span id="close7" class="close">&times;</span>
+            <img id="mimg7" class="modalImg">
+        </div>
+        <div id="modal8" class="modal">
+            <span id="close8" class="close">&times;</span>
+            <img id="mimg8" class="modalImg">
+        </div>
+        <div id="modal9" class="modal">
+            <span id="close9" class="close">&times;</span>
+            <img id="mimg9" class="modalImg">
+        </div>
+        <div id="modal10" class="modal">
+            <span id="close10" class="close">&times;</span>
+            <img id="mimg10" class="modalImg">
+        </div>
+        <div id="modal11" class="modal">
+            <span id="close11" class="close">&times;</span>
+            <img id="mimg11" class="modalImg">
+        </div>
+        <div id="modal12" class="modal">
+            <span id="close12" class="close">&times;</span>
+            <img id="mimg12" class="modalImg">
+        </div>
+        <div id="modal13" class="modal">
+            <span id="close13" class="close">&times;</span>
+            <img id="mimg13" class="modalImg">
+        </div>
+        <div id="modal14" class="modal">
+            <span id="close14" class="close">&times;</span>
+            <img id="mimg14" class="modalImg">
+        </div>
+        <div id="modal15" class="modal">
+            <span id="close15" class="close">&times;</span>
+            <img id="mimg15" class="modalImg">
+        </div>
+        <div id="modal16" class="modal">
+            <span id="close16" class="close">&times;</span>
+            <img id="mimg16" class="modalImg">
+        </div>
+        
+        <div id="flexContainer">
+            <div class="portfolioCard" id="card1">
+                <img id="img1" class="portfolioImages" src="Portfolio/Dragon Woman Cover.png">
+                <p><b>Dragon Woman Cover</b><br>I created this image to be used as a magazine cover but now it's my phone background</p>
+            </div>
+            <div class="portfolioCard" id="card2">
+                <img id="img2" class="portfolioImages" src="Portfolio/Life Kratom Logo.png">
+                <p><b>Life Kratom Bag Design</b><br>This is a bag design I created for a new brand of Kratom with a fun and colorful feel</p>
+            </div>
+            <div class="portfolioCard" id="card3">
+                <img id="img3" class="portfolioImages" src="Portfolio/Elevate.jpg">
+                <p><b>Elevate Infographic</b><br>An infographic designed for a competition held by a New York based education company</p>
+            </div>
+            <div class="portfolioCard" id="card4">
+                <img id="img4" class="portfolioImages" src="Portfolio/Fuji_mock-up.jpg">
+                <p><b>Fuji PowerPoint</b><br>My first PowerPoint template designed for a company named Fuji</p>
+            </div>
+            <div class="portfolioCard" id="card5">
+                <img id="img5" class="portfolioImages" src="Portfolio/Top Kratom Logo.png">
+                <p><b>Top Kratom</b><br>Another new Kratom brand design, this time far more minimalist and simple</p>
+            </div>
+            <div class="portfolioCard" id="card6">
+                <img id="img6" class="portfolioImages" src="Portfolio/710 hive.png">
+                <p><b>710 Ad</b><br>One of the ads I created for somkeshops celebrating 710 during my internship</p>
+            </div>
+            <div class="portfolioCard" id="card7">
+                <img id="img7" class="portfolioImages" src="Portfolio/Honey Bottles.png">
+                <p><b>Hi Honey Labels</b><br>These labels are fake labels I designed, but I'm hoping to make the product and label real one day</p>
+            </div>
+            <div class="portfolioCard" id="card8">
+                <img id="img8" class="portfolioImages" src="Portfolio/SWGR Logo-02.png">
+                <p><b>SWGR Real Estate Logo</b><br>I designed this logo for a new real estate company my employer started</p>
+            </div>
+            <div class="portfolioCard" id="card9">
+                <img id="img9" class="portfolioImages" src="Portfolio/Remarkable Herbs Adventure 1 Page.jpg">
+                <p><b>Remarkable Adventure Ad</b><br>This ad was designed to introduce a new adventure themed campaign for the Remarkable Herbs brand</p>
+            </div>
+            <div class="portfolioCard" id="card10">
+                <img id="img10" class="portfolioImages" src="Portfolio/Whole Herbs Exploded Bottle 1 Page.png">
+                <p><b>Whole Herbs Exploded Bottle</b><br>This magazine advertisement was the first I ever designed that went to print in multiple magazines</p>
+            </div>
+            <div class="portfolioCard" id="card11">
+                <img id="img11" class="portfolioImages" src="Portfolio/NicPack Spread.png">
+                <p><b>NicPack Magazine Spread</b><br>I designed this ad to be used in digital and print magazines</p>
+            </div>
+            <div class="portfolioCard" id="card12">
+                <img id="img12" class="portfolioImages" src="Portfolio/Vase and Cards.png">
+                <p><b>O.P.M.S Gold Cards</b><br>These are the "before" and "after" of a photo I edited to be used for a mass email</p>
+            </div>
+            <div class="portfolioCard" id="card13">
+                <img id="img13" class="portfolioImages" src="Portfolio/Headspace Logos.png">
+                <p><b>Headspace Logo</b><br>These are my favorites of the logos I designed to be used for a total smoke shop re-brand</p>
+            </div>
+            <div class="portfolioCard" id="card14">
+                <img id="img14" class="portfolioImages" src="Portfolio/Whole Herbs Leaves 1 Page.png">
+                <p><b>3 Leaf Magazine Ad</b><br>This magazine ad was my second chosen to go to print in multiple publications</p>
+            </div>
+            <div class="portfolioCard" id="card15">
+                <img id="img15" class="portfolioImages" src="Portfolio/Whole Herbs Foliage Frame 1 Page.jpg">
+                <p><b>Whole Herbs Foliage Ad</b><br>This ad has yet to go to print but is one of my favorites of the many I designed for Whole Herbs</p>
+            </div>
+            <div class="portfolioCard" id="card16">
+                <img id="img16" class="portfolioImages" src="Portfolio/Onix Media Final Logo.png">
+                <p><b>Onix Meedia Logo</b><br>This logo was chosen to become the official logo of the media company that produces Smoke Affair magazine</p>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script type="text/javascript">
+        //Dragon Woman
+            document.getElementById('card1').onclick = function(){
+                document.getElementById('modal1').style.display = "block";
+                document.getElementById('mimg1').src = img1.src
+            }
+            document.getElementById("close1").onclick = function() {
+                document.getElementById('modal1').style.display = "none";
+            }
+        //Life Kratom
+            document.getElementById('card2').onclick = function(){
+                document.getElementById('modal2').style.display = "block";
+                //document.getElementById('mimg2').src = img2.src; Removed to show different photo
+            }
+            document.getElementById("close2").onclick = function() {
+                document.getElementById('modal2').style.display = "none";
+            }
+        //Elevate
+            document.getElementById('card3').onclick = function(){
+                document.getElementById('modal3').style.display = "block";
+                document.getElementById('mimg3').src = img3.src;
+            }
+            document.getElementById("close3").onclick = function() {
+                document.getElementById('modal3').style.display = "none";
+            }
+        //Fuji PowerPoint
+            document.getElementById('card4').onclick = function(){
+                document.getElementById('modal4').style.display = "block";
+                document.getElementById('mimg4').src = img4.src;
+            }
+            document.getElementById("close4").onclick = function() {
+                document.getElementById('modal4').style.display = "none";
+            }
+        //Top Kratom
+            document.getElementById('card5').onclick = function(){
+                document.getElementById('modal5').style.display = "block";
+                //document.getElementById('mimg5').src = img5.src; Removed to show different photo
+            }
+            document.getElementById("close5").onclick = function() {
+                document.getElementById('modal5').style.display = "none";
+            }
+        //Hive 710 Ad
+            document.getElementById('card6').onclick = function(){
+                document.getElementById('modal6').style.display = "block";
+                document.getElementById('mimg6').src = img6.src;
+            }
+            document.getElementById("close6").onclick = function() {
+                document.getElementById('modal6').style.display = "none";
+            }
+        //Hi Honey
+            document.getElementById('card7').onclick = function(){
+                document.getElementById('modal7').style.display = "block";
+                document.getElementById('mimg7').src = img7.src;
+            }
+            document.getElementById("close7").onclick = function() {
+                document.getElementById('modal7').style.display = "none";
+            }
+        //SWGR
+            document.getElementById('card8').onclick = function(){
+                document.getElementById('modal8').style.display = "block";
+                document.getElementById('mimg8').src = img8.src
+            }
+            document.getElementById("close8").onclick = function() {
+                document.getElementById('modal8').style.display = "none";
+            }
+        //Remarkable Herbs Adventure
+            document.getElementById('card9').onclick = function(){
+                document.getElementById('modal9').style.display = "block";
+                document.getElementById('mimg9').src = img9.src
+            }
+            document.getElementById("close9").onclick = function() {
+                document.getElementById('modal9').style.display = "none";
+            }
+        //Whole Herbs Exploded
+            document.getElementById('card10').onclick = function(){
+                document.getElementById('modal10').style.display = "block";
+                document.getElementById('mimg10').src = img10.src;
+            }
+            document.getElementById("close10").onclick = function() {
+                document.getElementById('modal10').style.display = "none";
+            }
+        //NicPack Spread
+            document.getElementById('card11').onclick = function(){
+                document.getElementById('modal11').style.display = "block";
+                document.getElementById('mimg11').src = img11.src;
+            }
+            document.getElementById("close11").onclick = function() {
+                document.getElementById('modal11').style.display = "none";
+            }
+        //Vase and Cards
+            document.getElementById('card12').onclick = function(){
+                document.getElementById('modal12').style.display = "block";
+                document.getElementById('mimg12').src = img12.src;
+            }
+            document.getElementById("close12").onclick = function() {
+                document.getElementById('modal12').style.display = "none";
+            }
+        //Headspace Logo
+            document.getElementById('card13').onclick = function(){
+                document.getElementById('modal13').style.display = "block";
+                document.getElementById('mimg13').src = img13.src;
+            }
+            document.getElementById("close13").onclick = function() {
+                document.getElementById('modal13').style.display = "none";
+            }
+        //Whole Herbs 3 Leaf
+            document.getElementById('card14').onclick = function(){
+                document.getElementById('modal14').style.display = "block";
+                document.getElementById('mimg14').src = img14.src;
+            }
+            document.getElementById("close14").onclick = function() {
+                document.getElementById('modal14').style.display = "none";
+            }
+        //Whole Herbs Foliage
+            document.getElementById('card15').onclick = function(){
+                document.getElementById('modal15').style.display = "block";
+                document.getElementById('mimg15').src = img15.src;
+            }
+            document.getElementById("close15").onclick = function() {
+                document.getElementById('modal15').style.display = "none";
+            }
+        //Onix Media Logo
+            document.getElementById('card16').onclick = function(){
+                document.getElementById('modal16').style.display = "block";
+                document.getElementById('mimg16').src = img16.src;
+            }
+            document.getElementById("close16").onclick = function() {
+                document.getElementById('modal16').style.display = "none";
+            }
+        </script>
+    </body>
+</html>
